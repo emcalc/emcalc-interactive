@@ -29,3 +29,5 @@ elif lang == "en":
 else:
     print("not supported language please select tr or en")
     exit()
+
+input()
