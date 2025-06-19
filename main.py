@@ -34,7 +34,7 @@ if lang == "tr":
     print("\n--- SONUÇLAR ---")
     print(f"Teorik Enerji (%100 Verimle): {teorik_enerji:,.2f} Joule")
     print(f"Pratik Enerji (%{verimlilik_yuzdesi} Verimle): {pratik_enerji:,.2f} Joule")
-    print(f"Bu pratik enerji, {led_watt} Watt'lık bir LED lambayı aralıksız olarak yaklaşık {led_saniye:,.0f} saniye çalıştırabilir.")
+    print(f"Bu pratik enerjinin elektriğe dönüşümü ile, {led_watt} Watt'lık bir LED lambayı aralıksız olarak yaklaşık {led_saniye:,.0f} saniye çalıştırabilir.")
 
 
 
@@ -63,7 +63,7 @@ elif lang == "en":
     print("\n--- RESULTS ---")
     print(f"Theoretical Energy (at 100% efficiency): {theoretical_energy:,.2f} Joules")
     print(f"Practical Energy (at {efficiency_percentage}% efficiency): {practical_energy:,.2f} Joules")
-    print(f"This practical energy could power a {led_watt}-Watt LED lamp for approximately {led_seconds:,.0f} seconds.")
+    print(f"This practical energy to electric could power a {led_watt}-Watt LED lamp for approximately {led_seconds:,.0f} seconds.")
 
 else:
     print("Language not supported. Please select 'tr' or 'en'.")
