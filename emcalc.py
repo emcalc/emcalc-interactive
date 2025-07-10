@@ -25,12 +25,12 @@ if __name__ == '__main__':
 
     print("\nWelcome to the emcalc application")
 
-    Preset = input("[1]Fukushima\n[*] manuel\n")
+    Preset = input("[1]Fukushima\n[*]manuel\n")
 
     if Preset == "*":
-        j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35")
+        j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: ")
 
-        verimlilik = input("please input the mass to Heat efficieny defualt 0.90")
+        verimlilik = input("please input the mass to Heat efficieny defualt 0.90: ")
         device_name = "led"
         watt = 10
 
