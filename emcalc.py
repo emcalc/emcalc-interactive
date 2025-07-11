@@ -1,23 +1,23 @@
 import scipy.constants as const
 
 def grams_to_kg(grams):
-    """Gram değerini kilograma çevirir."""
+    """Grams to Kilogram."""
     return grams / 1000
 
 def calculate_theoretical_energy(mass_kg):
-    """Verilen kütlenin teorik E=mc^2 enerjisini hesaplar."""
+    """calculating E=mc2 (%100 efficieny)."""
     return mass_kg * const.c**2
 
 def calculate_practical_energy(theoretical_energy, efficiency):
-    """Teorik enerjiyi verimlilikle çarparak pratik enerjiyi bulur."""
+    """calculating pratical energy."""
     return theoretical_energy * efficiency
 
 def convert_joules_to_electricity(practical_energy_joules, conversion_efficiency):
-    """Pratik enerjinin ne kadarının elektriğe dönüştüğünü hesaplar."""
+    """calculating joules to watt energy."""
     return practical_energy_joules * conversion_efficiency
 
 def calculate_led_on_time_seconds(electric_energy_joules, watt):
-    """Elektrik enerjisiyle bir LED'in kaç saniye yanacağını hesaplar."""
+    """calculating watt to seconds."""
     return electric_energy_joules / watt
 
 
@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     print("\nWelcome to the emcalc application")
 
-    Preset = input("[1]Fukushima\n[*]manuel\n")
+    Preset = input("[1]BWR (Fukushima)\n[*]manuel\n")
 
     if Preset == "*":
         j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: ")
@@ -38,7 +38,7 @@ if __name__ == '__main__':
 
         long_term_efficieny = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
     elif Preset == "1":
-        j_to_electric = 0.33
+        j_to_electric = 0.31
 
         one_usage_efficiency = 0.001
 
