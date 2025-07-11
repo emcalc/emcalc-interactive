@@ -75,4 +75,4 @@ if __name__ == '__main__':
     print(f"Can run for approximately {one_usage_time_seconds:.0f} seconds.")
     print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
 
-    input("")
+    input("for exit the program click the Enter")

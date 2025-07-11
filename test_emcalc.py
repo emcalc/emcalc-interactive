@@ -1,23 +1,23 @@
 import scipy.constants as const
 from random import randint
 def grams_to_kg(grams):
-    """Gram değerini kilograma çevirir."""
+    """Grams to Kilogram."""
     return grams / 1000
 
 def calculate_theoretical_energy(mass_kg):
-    """Verilen kütlenin teorik E=mc^2 enerjisini hesaplar."""
+    """calculating E=mc2 (%100 efficieny)."""
     return mass_kg * const.c**2
 
 def calculate_practical_energy(theoretical_energy, efficiency):
-    """Teorik enerjiyi verimlilikle çarparak pratik enerjiyi bulur."""
+    """calculating pratical energy."""
     return theoretical_energy * efficiency
 
 def convert_joules_to_electricity(practical_energy_joules, conversion_efficiency):
-    """Pratik enerjinin ne kadarının elektriğe dönüştüğünü hesaplar."""
+    """calculating joules to watt energy."""
     return practical_energy_joules * conversion_efficiency
 
 def calculate_led_on_time_seconds(electric_energy_joules, watt):
-    """Elektrik enerjisiyle bir LED'in kaç saniye yanacağını hesaplar."""
+    """calculating watt to seconds."""
     return electric_energy_joules / watt
 
 def test_grams_to_kg():
