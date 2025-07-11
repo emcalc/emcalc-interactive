@@ -30,15 +30,20 @@ if __name__ == '__main__':
     if Preset == "*":
         j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: ")
 
-        verimlilik = input("please input the mass to Heat efficieny defualt 0.90: ")
+        one_usage_efficiency = input("please input the one usage efficieny example for %0.5: 0.005 defualt is 0.001")
+
+        long_term_efficieny = input("please input the mass to Heat efficieny defualt 0.90: ")
         device_name = "led"
         watt = 10
 
-        verimlilik = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
+        long_term_efficieny = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
     elif Preset == "1":
         j_to_electric = 0.33
 
-        verimlilik = 0.90
+        one_usage_efficiency = 0.001
+
+        long_term_efficieny = 0.90
+
         device_name = "led"
         watt = 10
 
@@ -49,19 +54,25 @@ if __name__ == '__main__':
 
     kg = grams_to_kg(kütle_gram)
     theoretical_energy = calculate_theoretical_energy(kg)
-    practical_energy = calculate_practical_energy(theoretical_energy, verimlilik)
-    electric_energy = convert_joules_to_electricity(practical_energy, j_to_electric)
-    on_time_seconds = calculate_led_on_time_seconds(electric_energy, watt)
-    on_time_hours = on_time_seconds / 3600
+    long_term_practical_energy = calculate_practical_energy(theoretical_energy, long_term_efficieny)
+    
+    one_usage_practical_energy = calculate_practical_energy(theoretical_energy, one_usage_efficiency)
+    
+    long_term_electric_energy = convert_joules_to_electricity(long_term_practical_energy, j_to_electric)
+    
+    one_usage_electric_energy = convert_joules_to_electricity(one_usage_practical_energy, j_to_electric)
+    one_usage_time_seconds = calculate_led_on_time_seconds(one_usage_electric_energy, watt)
+    one_usage_time_hours = one_usage_time_seconds / 3600
 
 
 
     print("\n--- RESULTS ---")
-    print(f"Practical energy (at {verimlilik*100:.0f}% efficiency): {practical_energy:.0f} Joules")
+    print(f"Long term practical energy (at {long_term_efficieny:.2f}% efficiency): {long_term_practical_energy:.0f} Joules")
+    print(f"One usage practical energy (at {one_usage_efficiency:.3f}% efficiency): {long_term_practical_energy:.0f} Joules")
     print(f"Theoretical energy (at 100% efficiency): {theoretical_energy:.0f} Joules")
     print("-" * 20)
     print(f"With the electricity generated from this energy, a {watt}-watt {device_name}:")
-    print(f"Can run for approximately {on_time_seconds:.0f} seconds.")
-    print(f"(This is approximately {on_time_hours:.0f} hours.)")
+    print(f"Can run for approximately {one_usage_time_seconds:.0f} seconds.")
+    print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
 
     input("")
