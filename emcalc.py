@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     print("\nWelcome to the emcalc application")
 
-    Preset = input("[1]BWR (Fukushima)\n[*]manuel\n")
+    Preset = input("[1]BWR (Fukushima, Ringhals-1)\n[2]PWR (Gravelines NGS, Ringhals-2-3-4)\n[3]PHWR (Bruce NGS)\n[*]manuel\n")
 
     if Preset == "*":
         j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: ")
@@ -46,8 +46,28 @@ if __name__ == '__main__':
 
         device_name = "led"
         watt = 10
+    elif Preset == "2":
+        j_to_electric = 0.33
+
+        one_usage_efficiency = 0.001
+        
+        long_term_efficieny = 0.90
+        
+        device_name = "led"
+        watt = 10
+
+    elif Preset == "3":
+        j_to_electric = 0.30
+
+        one_usage_efficiency = 0.001
+        
+        long_term_efficieny = 0.85
+        
+        device_name = "led"
+        watt = 10
 
     else:
+        input("\nfor exit the program click the Enter")
         exit()
 
     kütle_gram = float(input("Enter the mass (grams): "))
@@ -75,4 +95,4 @@ if __name__ == '__main__':
     print(f"Can run for approximately {one_usage_time_seconds:.0f} seconds.")
     print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
 
-    input("for exit the program click the Enter")
+    input("\nfor exit the program click the Enter")
