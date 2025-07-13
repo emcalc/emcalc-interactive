@@ -5,7 +5,7 @@ Calculating e=mc^2 auto transform gram to kilogram and giving joule (energy).
 ### Presets:
 predefined nuclear power plant types are assigned an efficiency ratio, you only need to enter the mass of the substance
 
-<img width="496" height="273" alt="Ekran Resmi 2025-07-11 15 51 41" src="https://github.com/user-attachments/assets/5a6b92b0-6735-41cb-b5d5-d8bd02dabfc4" />
+<img width="330" height="119" alt="Ekran Resmi 2025-07-13 11 47 55" src="https://github.com/user-attachments/assets/63f97e80-ac18-4d9c-8cf7-3aa0c59e4dc6" />
 
 ### Efficiency calculator:
 
