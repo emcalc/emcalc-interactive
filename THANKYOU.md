@@ -4,4 +4,6 @@ Thank you:
 
 [tarik-celik](https://gitlab.com/tarik-celik/)
 
-[gemini](gemini.google.com/app) | for localization and bugfix
+[gemini](gemini.google.com/app) | bugfix
+
+[Chatgpt](chatgpt.com)
