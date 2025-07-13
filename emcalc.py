@@ -1,7 +1,7 @@
 #---imports---
 import scipy.constants as const
 
-
+Presets = "[1]PWR (Gravelines NGS, Ringhals-2-3-4, Kori 1-2-3-4)\n[1]BWR (Fukushima, Ringhals-1)\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)\n[4]EPR (Olkiluoto NGS 3)\n[5]APR1400 (Shin-Kori 3-4-5-6)\n[*]manuel\n"
 #---functions---
 
 def easter_egg():
@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
     print("\nWelcome to the emcalc application")
 
-    Preset = input("[1]PWR (Gravelines NGS, Ringhals-2-3-4, Kori 1-2-3-4)\n[1]BWR (Fukushima, Ringhals-1)\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)\n[4]EPR (Olkiluoto NGS 3)\n[5]APR1400 (Shin-Kori 3-4-5-6)\n[*]manuel\n")
+    Preset = input(Presets)
 
     
     if Preset == "1":
@@ -104,8 +104,7 @@ if __name__ == '__main__':
         watt = 10
 
         long_term_efficiency = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
-
-    # INPUTS
+        
     mass_gram = float(input("Enter the mass (grams): "))
 
     kg = grams_to_kg(mass_gram)
