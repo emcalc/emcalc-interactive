@@ -1,5 +1,15 @@
 import scipy.constants as const
-from random import randint
+
+def easter_egg():
+    """Easter egg function."""
+    print("\nEaster Egg:\nIt is the e=mc2 calculator, not pi calculator.")
+    print("If you want to calculate pi, use the 'pi' command in Python.\nOr use the 'math' module: import math\nprint(math.pi)\n")
+    print("\n THANKS FOR USING EMCALC!")
+    print("Createors and Supporters:\n 1. eymndev 2. tarik celik 3. Gemini 4. ChatGPT and You :) \n")
+
+    input("\nfor exit the program click the Enter")
+    exit()
+
 def grams_to_kg(grams):
     """Grams to Kilogram."""
     return grams / 1000
