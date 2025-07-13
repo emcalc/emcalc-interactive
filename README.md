@@ -6,6 +6,9 @@
 - 🧪 Realistic nuclear plant efficiency simulation
 - 🎲 Presets for various reactor types
 
+
+[Installation Guide](emcalc.github.io/)
+
 ---
 
 ## 🚀 Features
