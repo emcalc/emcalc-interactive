@@ -1,0 +1,7 @@
+# PyInstaller output
+/dist/
+/build/
+*.spec
+
+# Python virtual environment
+.venv/
