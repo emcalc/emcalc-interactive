@@ -7,7 +7,7 @@
 -  Presets for various reactor types
 
 
-[Installation Guide](emcalc.github.io/)
+[Installation Guide](https://emcalc.github.io/)
 
 ---
 
