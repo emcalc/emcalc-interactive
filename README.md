@@ -1,6 +1,6 @@
 # emcalc
 
-**emcalc** is a CLI tool for calculating `E = mc²`, with advanced support for:
+**emcalc** is a CLI tool for calculating E = mc², with advanced support for:
 -  Gram-to-kilogram conversion
 -  Heat loss and electric conversion
 -  Realistic nuclear plant efficiency simulation
