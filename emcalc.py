@@ -1,15 +1,14 @@
 # region ---imports---
 import scipy.constants as const
 # endregion
-Presets =(
-"\n\n---Presets---"
-"\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4)"
-"\n[1]BWR (Fukushima, Ringhals-1)"
-"\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)"
-"\n[4]EPR (Olkiluoto NGS 3)"
-"\n[5]APR1400 (Shin-Kori 3-4-5-6)"
-"\n[*]manuel")
-# region---functions---
+
+
+langs = (
+    "\n\n---Languages---"
+    "\n[tr]Türkçe"
+    "\n[en]English")
+
+# region ---functions---
 def easter_egg():
     """Easter egg function."""
     print("\nEaster Egg:\nIt is the e=mc2 calculator, not pi calculator.")
@@ -47,16 +46,30 @@ def _calculations(mass_gram):
             one_usage_efficiency, one_usage_practical_energy,
             theoretical_energy, watt, device_name,
             one_usage_time_seconds, one_usage_time_hours)
-def _results(long_term_efficiency, long_term_practical_energy, one_usage_efficiency, one_usage_practical_energy, theoretical_energy, watt, device_name, one_usage_time_seconds, one_usage_time_hours):
-    print("\n--- RESULTS ---")
-    print(f"Long term practical energy (at {long_term_efficiency:.2f}% efficiency): {long_term_practical_energy:.0f} Joules")
-    print(f"One usage practical energy (at {one_usage_efficiency:.3f}% efficiency): {one_usage_practical_energy:.0f} Joules")
-    print(f"Theoretical energy (at 100% efficiency): {theoretical_energy:.0f} Joules")
-    print("-" * 20)
-    print(f"With the electricity generated from this energy, a {watt}-watt {device_name}:")
-    print(f"Can run for approximately {one_usage_time_seconds:.0f} seconds.")
-    print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
+def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_efficiency, one_usage_practical_energy, theoretical_energy, watt, device_name, one_usage_time_seconds, one_usage_time_hours):
+    
+    if lang == "tr":
+        print("\n--- SONUÇLAR ---")
+        print(f"Uzun vadeli pratik enerji (verimlilik: {long_term_efficiency:.2f}%): {long_term_practical_energy:.0f} Joule")
+        print(f"Tek kullanım pratik enerji (verimlilik: {one_usage_efficiency:.3f}%): {one_usage_practical_energy:.0f} Joule")
+        print(f"Teorik enerji (verimlilik: %100): {theoretical_energy:.0f} Joule")
+        print("-" * 20)
+        print(f"Bu enerjiden üretilen elektrikle, {device_name} ({watt} watt):")
+        print(f"Yaklaşık olarak {one_usage_time_seconds:.0f} saniye çalışabilir.")
+        print(f"(Bu yaklaşık olarak {one_usage_time_hours:.0f} saat.)")
+        # translated with github copilot
+    else:
+        print("\n--- RESULTS ---")
+        print(f"Long term practical energy (at {long_term_efficiency:.2f}% efficiency): {long_term_practical_energy:.0f} Joules")
+        print(f"One usage practical energy (at {one_usage_efficiency:.3f}% efficiency): {one_usage_practical_energy:.0f} Joules")
+        print(f"Theoretical energy (at 100% efficiency): {theoretical_energy:.0f} Joules")
+        print("-" * 20)
+        print(f"With the electricity generated from this energy, a {watt}-watt {device_name}:")
+        print(f"Can run for approximately {one_usage_time_seconds:.0f} seconds.")
+        print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
 # endregion
+
+
 
 if __name__ == '__main__':
     
@@ -66,7 +79,28 @@ if __name__ == '__main__':
     # endregion
 
     # region input
-    Preset = input(Presets + "\nPreset: ")
+    lang = input(langs + "\nSelect: ").strip().lower()
+
+    if lang == "tr":
+        Presets =(
+        "\n\n---Ön Ayarlar---"
+        "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4)"
+        "\n[1]BWR (Fukuşima, Ringhals-1)"
+        "\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)"
+        "\n[4]EPR (Olkiluoto NGS 3)"
+        "\n[5]APR1400 (Shin-Kori 3-4-5-6)"
+        "\n[*]elle")
+    else:
+        Presets =(
+        "\n\n---Presets---"
+        "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4)"
+        "\n[1]BWR (Fukushima, Ringhals-1)"
+        "\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)"
+        "\n[4]EPR (Olkiluoto NGS 3)"
+        "\n[5]APR1400 (Shin-Kori 3-4-5-6)"
+        "\n[*]manuel")
+
+    Preset = input(Presets + "\nSelect: ")
 
     if Preset == "1":
         j_to_electric = 0.33
@@ -118,19 +152,35 @@ if __name__ == '__main__':
     elif  Preset == "3,14":
         easter_egg()
     else:
-        j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: ")
+        if lang == "tr":
+            j_to_electric = input("Lütfen jul'den elektrik verimliliğini giriniz örnek %5: 0.05 varsayılan 0.35: ")
 
-        one_usage_efficiency = 0.001
+            one_usage_efficiency = 0.001
 
-        long_term_efficiency = input("please input the mass to Heat efficieny defualt 0.90: ")
-        device_name = "led"
-        watt = 10
+            long_term_efficiency = input("Lütfen kütleden ısıya verimliliğini giriniz varsayılan 0.90: ")
+            device_name = "led"
+            watt = 10
 
-        long_term_efficiency = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
-    mass_gram = float(input("Enter the mass (grams): "))
+            long_term_efficiency = float(input("Kütle-enerji dönüşüm verimliliğini giriniz (örnek: %5 için, 0.05 giriniz): "))
+        else:
+            j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: ")
+
+            one_usage_efficiency = 0.001
+
+            long_term_efficiency = input("please input the mass to Heat efficieny defualt 0.90: ")
+            device_name = "led"
+            watt = 10
+
+            long_term_efficiency = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
+    
+    if lang == "tr":
+        mass_gram = float(input("Lütfen kütleyi giriniz (gram): "))
+    else:
+        mass_gram = float(input("Enter the mass (grams): "))
     # endregion
     
     results = _calculations(mass_gram)
-    _results(*results)
+
+    _results(lang, *results)
 
     input()
