@@ -14,8 +14,12 @@ Calculates theoretical energy, practical energy in a single conversion and pract
 
 <img width="502" height="158" alt="Ekran Resmi 2025-07-11 16 05 45" src="https://github.com/user-attachments/assets/cda84dd2-89d5-4a79-8cf3-ea5be7529152" />
 
-### Super Secret Codes...
-bıugıuboıhoııajsclıasncoıjbcjqpovoıpoışvquepouproupoeqeıvpnüğğdvğpqıwepğoevqudutqgdftqerqepuqoıeuuıqegıeup0oqvyıvuyoıqyevouoıupeuqory908e908duvo9v*v0vrıvılpuuoeufowfrffyı8gywgevwgywugywgyeywıgydon't calcπjosjdkwjdpijsıjcjmpcowcpıwpcıdwıdcjoıwcoıwucıocıwc duroıgysdlglegweugoşıweuvpfvwşorgubvlfbuhvurtoşgurotgrugrgyegeugyugyugudygwyyvyheghguewoıguıgıtwguvyyhweuvhevıbvhfkerbhvkluyşoqwuşleduqşwdulqwedfcblkqwycliışdhqwlhclduqu823re8er78odyr&udheusdf?Fd95,?dfdjfdıshdfgfurufgufrfvfe??*sdkdfydgısfgıudfodfd0f9d97f76fdfdfrvtf
+### Language Selector:
+
+You can select language
+
+<img width="612" height="497" alt="Bildschirmfoto 2025-07-18 um 12 27 17" src="https://github.com/user-attachments/assets/a83dbdff-aa91-499f-ba97-2f89d5b5bd69" />
+
 
 [Thank you | credits](THANKYOU.md)
 
