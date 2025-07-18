@@ -30,7 +30,7 @@ it is largest version and most features in this version:
 
 ### Minimal version
 
-Minimal version is 733 Bytes but mac compiled file is only 3,5 MBs
+Minimal version is 770 Bytes but mac compiled file is only 3,5 MBs
 
 it is smallest version, no bloat, only onefile (+ python) 
 
