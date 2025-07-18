@@ -1,5 +1,5 @@
 # region ---imports---
-import scipy.constants as const
+from scipy.constants import c
 # endregion
 
 

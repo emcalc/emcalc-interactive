@@ -1,4 +1,4 @@
-import scipy.constants as const
+from scipy.constants import c
 
 def easter_egg():
     """Easter egg function."""

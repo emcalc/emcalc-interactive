@@ -1,3 +1,5 @@
+from scipy.constants import c
+
 def easter_egg():
     """Easter egg function."""
     print("\nEaster Egg:\nIt is the e=mc2 calculator, not pi calculator.")
@@ -12,7 +14,7 @@ def grams_to_kg(grams):
     return grams / 1000
 def calculate_theoretical_energy(mass_kg):
     """calculating E=mc2 (%100 efficiency)."""
-    return mass_kg * const.c**2
+    return mass_kg * c**2
 def calculate_practical_energy(theoretical_energy, efficiency):
     """calculating pratical energy."""
     return theoretical_energy * efficiency
