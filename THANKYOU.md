@@ -7,3 +7,5 @@ Thank you:
 [gemini](gemini.google.com/app) | bugfix
 
 [Chatgpt](chatgpt.com)
+
+[Github copilot](github.com) | Translation
