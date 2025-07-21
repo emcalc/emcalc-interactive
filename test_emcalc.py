@@ -16,7 +16,7 @@ def grams_to_kg(grams):
 
 def calculate_theoretical_energy(mass_kg):
     """calculating E=mc2 (%100 efficieny)."""
-    return mass_kg * const.c**2
+    return mass_kg * c**2
 
 def calculate_practical_energy(theoretical_energy, efficiency):
     """calculating pratical energy."""
@@ -36,7 +36,7 @@ def test_grams_to_kg():
     assert grams_to_kg(0) == 0
 
 def test_calculate_theoretical_energy():
-    assert calculate_theoretical_energy(1) == const.c**2
+    assert calculate_theoretical_energy(1) == c**2
     assert calculate_theoretical_energy(0) == 0
 
 def test_calculate_practical_energy():
