@@ -1,7 +1,4 @@
-# region ---imports---
-from scipy.constants import c
-# endregion
-
+c = 299792458
 
 langs = (
     "\n\n---Languages---"
@@ -68,8 +65,6 @@ def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_e
         print(f"Can run for approximately {one_usage_time_seconds:.0f} seconds.")
         print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
 # endregion
-
-
 
 if __name__ == '__main__':
     
