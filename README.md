@@ -1,48 +1,83 @@
-# emcalc
-Calculating e=mc^2 auto transform gram to kilogram and giving joule (energy).
+# ⚛️ emcalc — Einstein’s E=mc² Energy Calculator
 
-## Features
-### Presets:
-predefined nuclear power plant types are assigned an efficiency ratio, you only need to enter the mass of the substance
+> **Instantly calculate mass-energy equivalence with style, presets, and full open-source freedom.**
 
-<img width="330" height="119" alt="Ekran Resmi 2025-07-13 11 47 55" src="https://github.com/user-attachments/assets/63f97e80-ac18-4d9c-8cf7-3aa0c59e4dc6" />
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-informational)](#)
 
-### Efficiency calculator:
+---
 
-not only converts to joules with a simple calculation, but also calculates and gives the heat loss, the loss in conversion to electricity, the efficiency ratio in a single conversion and the efficiency in repeating the substance until the end.
-Calculates theoretical energy, practical energy in a single conversion and practical energy in iteration
+## ✨ What is emcalc?
 
-<img width="502" height="158" alt="Ekran Resmi 2025-07-11 16 05 45" src="https://github.com/user-attachments/assets/cda84dd2-89d5-4a79-8cf3-ea5be7529152" />
+**emcalc** is a lightweight, open-source tool designed to calculate energy from mass using Einstein's famous formula:  
+\[
+E = mc^2
+\]
 
-### Language Selector:
+But it doesn’t stop there:
 
-You can select language
+- 🎛️ **Presets** for common elements like uranium, TNT, human body, and more  
+- 📟 **Minimal**, **CLI**, and **interactive** modes included  
+- 🧠 **Educational**: Great for students, teachers, and science lovers  
+- 🛠️ **Open Source** and licensed under **GNU GPLv3**
 
-<img width="612" height="497" alt="Bildschirmfoto 2025-07-18 um 12 27 17" src="https://github.com/user-attachments/assets/a83dbdff-aa91-499f-ba97-2f89d5b5bd69" />
+---
 
-### Defualt version
+## 📦 Features
 
-Defualt version is 7 KBs but mac compiled file is only 8.1 MBs
+- ✅ Accurate `E=mc²` calculations with constants from `scipy.constants`  
+- 🚀 Multi-mode support: interactive, CLI, and minimal  
+- 💡 Helpful tooltips and preset values  
+- 🧪 Ideal for physics learning, projects, or curiosity  
+- 🐧 Cross-platform (Tested on macOS, Linux, Windows)  
 
-it is largest version and most features in this version:
+⸻
 
-<img width="1470" height="923" alt="Bildschirmfoto 2025-07-18 um 12 44 27" src="https://github.com/user-attachments/assets/57a2c308-52db-433b-945c-2eb5f28082a8" />
+🚀 Getting Started
 
-### Minimal version
+🔧 Requirements
+	•	Python 3.9+
 
-Minimal version is 770 Bytes but mac compiled file is only 3,5 MBs
+🧪 Run the program
 
-it is smallest version, no bloat, only onefile (+ python) 
+Option 1: Clone and run
 
-<img width="612" height="497" alt="Bildschirmfoto 2025-07-18 um 13 19 26" src="https://github.com/user-attachments/assets/476ead74-8dfb-4f88-aa3a-ec4bebf2cd54" />
+git clone https://github.com/emcalc/emcalc.git
+cd emcalc
+python emcalc.py
 
-### CLI version
+Option 2: Compile as standalone (macOS/Linux)
 
-CLI version is 3 KBs but mac compiled file is only 8,3 MBs
+chmod +x autocompile.sh
+./autocompile.sh
+./dist/emcalc
 
-it is CLI version
 
-CLI is under the maintenance 
+⸻
 
-[Thank you | credits](THANKYOU.md)
+🧠 Why emcalc?
 
+This isn’t just a calculator.
+It’s a learning tool, an experiment launcher, a playground for students curious about the cosmos and energy.
+It’s a tribute to Einstein’s most famous equation — now in executable form.
+
+⸻
+
+📜 License
+
+This project is licensed under the GNU General Public License v3.0.
+
+You are free to use, modify, and redistribute — as long as you give credit and keep it open.
+
+See LICENSE for full text.
+
+⸻
+
+👨‍💻 Author
+
+Made with ❤️ by Eymen Yıldırım
+
+⸻
+
+🌟 Star the repo if you like it!
