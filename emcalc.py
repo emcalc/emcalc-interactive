@@ -1,4 +1,4 @@
-c = 299792458
+C = 299792458
 
 langs = (
     "\n\n---Languages---"
@@ -20,7 +20,7 @@ def grams_to_kg(grams):
     return grams / 1000
 def calculate_theoretical_energy(mass_kg):
     """calculating E=mc2 (%100 efficiency)."""
-    return mass_kg * c**2
+    return mass_kg * C**2
 def calculate_practical_energy(theoretical_energy, efficiency):
     """calculating pratical energy."""
     return theoretical_energy * efficiency
@@ -30,7 +30,7 @@ def convert_joules_to_electricity(practical_energy_joules, conversion_efficiency
 def calculate_led_on_time_seconds(electric_energy_joules, watt):
     """calculating watt to seconds."""
     return electric_energy_joules / watt
-def _calculations(mass_gram):
+def _calculations(mass_gram, long_term_efficiency, one_usage_efficiency, j_to_electric, watt, device_name):
     kg = grams_to_kg(mass_gram)
     theoretical_energy = calculate_theoretical_energy(kg)
     long_term_practical_energy = calculate_practical_energy(theoretical_energy, long_term_efficiency)
@@ -66,7 +66,7 @@ def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_e
         print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
 # endregion
 
-if __name__ == '__main__':
+def main():
     
     # region welcome screen
     print("\n" * 100)
@@ -80,7 +80,7 @@ if __name__ == '__main__':
         Presets =(
         "\n\n---Ön Ayarlar---"
         "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4)"
-        "\n[1]BWR (Fukuşima, Ringhals-1)"
+        "\n[2]BWR (Fukuşima, Ringhals-1)"
         "\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)"
         "\n[4]EPR (Olkiluoto NGS 3)"
         "\n[5]APR1400 (Shin-Kori 3-4-5-6)"
@@ -89,7 +89,7 @@ if __name__ == '__main__':
         Presets =(
         "\n\n---Presets---"
         "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4)"
-        "\n[1]BWR (Fukushima, Ringhals-1)"
+        "\n[2]BWR (Fukushima, Ringhals-1)"
         "\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)"
         "\n[4]EPR (Olkiluoto NGS 3)"
         "\n[5]APR1400 (Shin-Kori 3-4-5-6)"
@@ -148,34 +148,58 @@ if __name__ == '__main__':
         easter_egg()
     else:
         if lang == "tr":
-            j_to_electric = input("Lütfen jul'den elektrik verimliliğini giriniz örnek %5: 0.05 varsayılan 0.35: ")
+            try:
+                j_to_electric = float(input("Lütfen jul'den elektrik verimliliğini giriniz örnek %5: 0.05 varsayılan 0.35: "))
+            except ValueError:
+                print("Geçersiz giriş! Program sonlandırılıyor.")
+                exit()
 
             one_usage_efficiency = 0.001
 
-            long_term_efficiency = input("Lütfen kütleden ısıya verimliliğini giriniz varsayılan 0.90: ")
+            try:
+                long_term_efficiency = float(input("Kütle-enerji dönüşüm verimliliğini giriniz (örnek: %5 için, 0.05 giriniz): "))
+            except ValueError:
+                print("Geçersiz giriş! Program sonlandırılıyor.")
+                exit()
+
             device_name = "led"
             watt = 10
-
-            long_term_efficiency = float(input("Kütle-enerji dönüşüm verimliliğini giriniz (örnek: %5 için, 0.05 giriniz): "))
         else:
-            j_to_electric = input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: ")
+            try:
+                j_to_electric = float(input("please input the jul to electric efficeny example for %5: 0.05 defualt is 0.35: "))
+            except ValueError:
+                print("Invalid input! Exiting program.")
+                exit()
 
             one_usage_efficiency = 0.001
 
-            long_term_efficiency = input("please input the mass to Heat efficieny defualt 0.90: ")
+            try:
+                long_term_efficiency = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
+            except ValueError:
+                print("Invalid input! Exiting program.")
+                exit()
+
             device_name = "led"
             watt = 10
-
-            long_term_efficiency = float(input("Enter the mass-energy conversion efficiency (example: for 5%, enter 0.05): "))
     
-    if lang == "tr":
-        mass_gram = float(input("Lütfen kütleyi giriniz (gram): "))
-    else:
-        mass_gram = float(input("Enter the mass (grams): "))
+    try:
+        if lang == "tr":
+            mass_gram = float(input("Lütfen kütleyi giriniz (gram): "))
+        else:
+            mass_gram = float(input("Enter the mass (grams): "))
+    except ValueError:
+        if lang == "tr":
+            print("Geçersiz giriş! Program sonlandırılıyor.")
+        else:
+            print("Invalid input! Exiting program.")
+        exit()
     # endregion
     
-    results = _calculations(mass_gram)
+    results = _calculations(mass_gram, long_term_efficiency, one_usage_efficiency, j_to_electric, watt, device_name)
 
     _results(lang, *results)
 
     input()
+
+if __name__ == "__main__":
+    main()
