@@ -32,7 +32,9 @@ jobs:
 
       - name: Build with PyInstaller
         run: |
-          pyinstaller --onefile your_script.py
+          pyinstaller --onefile emcalc.py
+          pyinstaller --onefile CLI_emcalc.py
+          pyinstaller --onefile minimal_emcalc.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
