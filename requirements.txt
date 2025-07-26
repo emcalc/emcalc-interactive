@@ -11,4 +11,4 @@ click
 # nothing
 
 # emcalc.py requirements:
-#  libemcalc.py
+# libemcalc.py - in the same path
