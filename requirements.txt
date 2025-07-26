@@ -1,2 +1,7 @@
 # CLI requirements:
+sys
+click
 # emcalc.py
+
+# other requirements:
+# nothing

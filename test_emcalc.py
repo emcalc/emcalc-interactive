@@ -1,4 +1,4 @@
-from scipy.constants import c
+c = 299792458  # Speed of light in m/s
 
 def easter_egg():
     """Easter egg function."""
