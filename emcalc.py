@@ -1,4 +1,4 @@
-C = 299792458
+from libemcalc import *
 
 langs = (
     "\n\n---Languages---"
@@ -6,36 +6,12 @@ langs = (
     "\n[en]English")
 
 # region ---functions---
-def easter_egg():
-    """Easter egg function."""
-    print("\nEaster Egg:\nIt is the e=mc2 calculator, not pi calculator.")
-    print("If you want to calculate pi, use the 'pi' command in Python.\nOr use the 'math' module: import math\nprint(math.pi)\n")
-    print("\n THANKS FOR USING EMCALC!")
-    print("Createors and Supporters:\n 1. eymndev 2. tarik celik 3. Gemini 4. ChatGPT and You :) \n")
-
-    input("\nfor exit the program click the Enter")
-    exit()
-def grams_to_kg(grams):
-    """Grams to Kilogram."""
-    return grams / 1000
-def calculate_theoretical_energy(mass_kg):
-    """calculating E=mc2 (%100 efficiency)."""
-    return mass_kg * C**2
-def calculate_practical_energy(theoretical_energy, efficiency):
-    """calculating pratical energy."""
-    return theoretical_energy * efficiency
-def convert_joules_to_electricity(practical_energy_joules, conversion_efficiency):
-    """calculating joules to watt energy."""
-    return practical_energy_joules * conversion_efficiency
-def calculate_led_on_time_seconds(electric_energy_joules, watt):
-    """calculating watt to seconds."""
-    return electric_energy_joules / watt
 def _calculations(mass_gram, long_term_efficiency, one_usage_efficiency, j_to_electric, watt, device_name):
     kg = grams_to_kg(mass_gram)
     theoretical_energy = calculate_theoretical_energy(kg)
     long_term_practical_energy = calculate_practical_energy(theoretical_energy, long_term_efficiency)
     one_usage_practical_energy = calculate_practical_energy(theoretical_energy, one_usage_efficiency)
-    long_term_electric_energy = convert_joules_to_electricity(long_term_practical_energy, j_to_electric)
+    # long_term_electric_energy = convert_joules_to_electricity(long_term_practical_energy, j_to_electric) - comming soon
     one_usage_electric_energy = convert_joules_to_electricity(one_usage_practical_energy, j_to_electric)
     one_usage_time_seconds = calculate_led_on_time_seconds(one_usage_electric_energy, watt)
     one_usage_time_hours = one_usage_time_seconds / 3600

@@ -2,8 +2,13 @@
 
 #  sys # embedded in python
 click
-
 # emcalc.py
 
-# other requirements:
+# libemcalc.py requrements:
+#  nothing
+
+# test_emcalc.py requirements:
 # nothing
+
+# emcalc.py requirements:
+#  libemcalc.py
