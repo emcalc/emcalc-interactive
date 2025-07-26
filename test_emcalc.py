@@ -1,4 +1,4 @@
-c = 299792458  # Speed of light in m/s
+c = 299792458 
 
 def easter_egg():
     """Easter egg function."""
