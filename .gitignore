@@ -5,3 +5,29 @@
 
 # Python virtual environment
 .venv/
+
+# system files
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.cache/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE/editor settings
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project

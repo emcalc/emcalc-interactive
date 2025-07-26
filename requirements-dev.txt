@@ -1,8 +1,12 @@
-# CLI requirements:
+flake8
+pytest
+black
 
+# ----
+
+# CLI requirements:
 sys
 click
-
 # emcalc.py
 
 # other requirements:
