@@ -17,7 +17,7 @@ E = mc^2
 
 But it doesn’t stop there:
 
-- 🎛️ **Presets** for common elements like uranium, TNT, human body, and more  
+- 🎛️ **Presets** for common nuclear power plants
 - 📟 **Minimal**, **CLI**, and **interactive** modes included  
 - 🧠 **Educational**: Great for students, teachers, and science lovers  
 - 🛠️ **Open Source** and licensed under **GNU GPLv3**
