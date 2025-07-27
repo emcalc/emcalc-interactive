@@ -31,3 +31,5 @@ __pycache__/
 .vscode/
 *.sublime-workspace
 *.sublime-project
+
+source_code_ziped/
