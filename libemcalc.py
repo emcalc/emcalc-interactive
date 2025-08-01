@@ -24,9 +24,7 @@ def convert_joules_to_electricity(practical_energy_joules, conversion_efficiency
 def calculate_led_on_time_seconds(electric_energy_joules, watt):
     """calculating watt to seconds."""
     return electric_energy_joules / watt
-def _license():
-    print("licansed under the GNU General Public License v3.0"
-          " (https://www.gnu.org/licenses/gpl-3.0.en.html)")
+    
 if __name__ == "__main__":
     _license()
     exit()
