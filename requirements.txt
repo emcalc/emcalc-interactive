@@ -1,14 +1,12 @@
-# CLI requirements:
+# all programs needs
+-e ./
+git+https://github.com/eymndev/Grams-to-KG.git
 
-#  sys # embedded in python
+# CLI requirements:
+sys
 click
+
 # emcalc.py
 
-# libemcalc.py requrements:
-#  nothing
-
-# test_emcalc.py requirements:
+# other requirements:
 # nothing
-
-# emcalc.py requirements:
-# libemcalc.py - in the same path

@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+emcalc.egg-info/PKG-INFO
+emcalc.egg-info/SOURCES.txt
+emcalc.egg-info/dependency_links.txt
+emcalc.egg-info/top_level.txt

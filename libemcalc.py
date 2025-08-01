@@ -1,4 +1,6 @@
-c = 299792458 
+import lib_Grams_to_KG
+
+c = 299792458
 
 def easter_egg():
     """Easter egg function."""
