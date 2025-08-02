@@ -33,10 +33,10 @@ def calculate_led_on_time_seconds(electric_energy_joules, watt):
     return electric_energy_joules / watt
 
 def test_grams_to_kg():
-    assert grams_to_kg(1000) == 1 # gram
-    assert grams_to_kg(543) == 0.543 # gram
-    assert grams_to_kg(3.142) == 3142 # gram
-    assert grams_to_kg(0) == 0 #gram
+    assert grams_to_kg(1000) == 1 # kilograms
+    assert grams_to_kg(543) == 0.543 # kilograms
+    assert grams_to_kg(3.142) == 0.003142 # kilograms
+    assert grams_to_kg(0) == 0 #kilograms
 
 def test_calculate_theoretical_energy():
     assert calculate_theoretical_energy(1) == c**2
