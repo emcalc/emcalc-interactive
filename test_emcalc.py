@@ -14,7 +14,7 @@ def easter_egg():
 
 def grams_to_kg(grams):
     """Grams to Kilogram."""
-    return g2kg(500)
+    return g2kg(grams)
 
 def calculate_theoretical_energy(mass_kg):
     """calculating E=mc2 (%100 efficieny)."""
@@ -33,9 +33,10 @@ def calculate_led_on_time_seconds(electric_energy_joules, watt):
     return electric_energy_joules / watt
 
 def test_grams_to_kg():
-    assert grams_to_kg(1000) == 1
-    assert grams_to_kg(500) == 0.5
-    assert grams_to_kg(0) == 0
+    assert grams_to_kg(1000) == 1 # gram
+    assert grams_to_kg(543) == 0.543 # gram
+    assert grams_to_kg(3.142) == 3142 # gram
+    assert grams_to_kg(0) == 0 #gram
 
 def test_calculate_theoretical_energy():
     assert calculate_theoretical_energy(1) == c**2
