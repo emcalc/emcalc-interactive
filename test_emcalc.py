@@ -14,7 +14,7 @@ def easter_egg():
 
 def grams_to_kg(grams):
     """Grams to Kilogram."""
-    return g2kg(1000)
+    return g2kg(500)
 
 def calculate_theoretical_energy(mass_kg):
     """calculating E=mc2 (%100 efficieny)."""
