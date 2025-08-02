@@ -1,4 +1,4 @@
-from lib_Grams_to_KG.lib_Grams_to_KG import grams_to_kg as g2kg
+from lib_Grams_to_KG import grams_to_kg as g2kg
 
 c = 299792458 
 
