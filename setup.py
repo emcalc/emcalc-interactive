@@ -6,7 +6,7 @@ with open("requirements.txt") as f:
 setup(
     name='emcalc',
     version='11.0.0',
-    python_requires<='3.9'
+    python_requires'<=3.9'
     author='eymndev',
     author_email='eymenyildirim13@icloud.com',
     description='Calculates E=mc^2, auto-converts gram to kilogram and returns energy in joules.',
