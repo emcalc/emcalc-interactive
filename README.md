@@ -47,12 +47,13 @@ git clone https://github.com/emcalc/emcalc.git
 cd emcalc
 python emcalc.py
 
-Option 2: Compile as standalone (macOS/Linux)
+Option 2: Compiled file (macOS/Linux/Windows)
 
-chmod +x autocompile.sh
-./autocompile.sh
-./dist/emcalc
+go the [https://github.com/emcalc/emcalc.github.io/releases/latest](https://github.com/emcalc/emcalc.github.io/releases/latest)
 
+download and unzip file
+
+click and use!
 
 ⸻
 
