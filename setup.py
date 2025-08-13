@@ -10,7 +10,7 @@ setup(
     author='eymndev',
     author_email='eymenyildirim13@icloud.com',
     description='Calculates E=mc^2, auto-converts gram to kilogram and returns energy in joules.',
-    url='https://github.com/emcalc/emcalc',
+    url='https://emcalc.github.io//',
     license='GPLv3',
     install_requires=requirements,
     py_modules=[
