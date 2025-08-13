@@ -5,7 +5,7 @@ black
 # ----
 
 # all programs needs
--e ./
+# local package install: run "pip install -e ."
 git+https://github.com/eymndev/Grams-to-KG.git
 Scipy
 
