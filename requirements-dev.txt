@@ -4,10 +4,9 @@ black
 
 # ----
 
-# all programs needs
 # local package install: run "pip install -e ."
-git+https://github.com/eymndev/Grams-to-KG.git
-Scipy
+scipy
+grams-to-kg @ git+https://github.com/eymndev/Grams-to-KG.git
 
 # CLI requirements:
 # sys
