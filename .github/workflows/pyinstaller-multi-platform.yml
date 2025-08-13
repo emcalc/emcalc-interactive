@@ -1,4 +1,3 @@
-# .github/workflows/pyinstaller-multi-platform.yml
 name: Build with PyInstaller
 
 on:
@@ -30,11 +29,14 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
+      - name: Install project (editable)
+        run: pip install -e .
+
       - name: Build with PyInstaller
         run: |
-          pyinstaller --onefile emcalc.py
-          pyinstaller --onefile CLI_emcalc.py
-          pyinstaller --onefile minimal_emcalc.py
+          pyinstaller --clean --noconfirm --onefile -n emcalc emcalc.py
+          pyinstaller --clean --noconfirm --onefile -n CLI_emcalc CLI_emcalc.py
+          pyinstaller --clean --noconfirm --onefile -n minimal_emcalc minimal_emcalc.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
