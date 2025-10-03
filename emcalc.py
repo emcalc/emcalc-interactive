@@ -73,7 +73,22 @@ def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_e
 # endregion
 
 def main():
-    
+    # warning
+    print("\n" * 100)
+    print("Warning!")
+    print("Warning! Please comply with the laws of your country. Disclaimer: This program was not written with malicious intent by the authors, and any failure by users to comply with the laws of their country does not affect the program developers.")
+    print("")
+    print("")
+    print("To continue, please type 'I HAVE READ AND ACCEPT'. For more information: https://www.un.org/en ")
+    Accept = input("Write: ")
+
+    if Accept == "I HAVE READ AND ACCEPT":
+        print("Opening the program...")
+    else:
+        print("You can't use it")
+        while True:
+            pass
+
     # region welcome screen
     print("\n" * 100)
     print("Welcome to the emcalc application")

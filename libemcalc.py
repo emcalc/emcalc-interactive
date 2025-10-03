@@ -1,9 +1,9 @@
-from lib_Grams_to_KG import grams_to_kg as g2kg
-from scipy.constants import c
+c = 299792458
 
 def grams_to_kg(grams):
     """Convert grams to kilograms."""
-    return g2kg(grams)
+    return grams / 1000
+
 
 def easter_egg():
     """Easter egg function."""
