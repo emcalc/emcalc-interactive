@@ -80,7 +80,7 @@ def main():
     if lang == "tr":
         Presets =(
         "\n\n---Ön Ayarlar---"
-        "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4)"
+        "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4, Akkuyu Nükleer)"
         "\n[2]BWR (Fukuşima, Ringhals-1)"
         "\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)"
         "\n[4]EPR (Olkiluoto NGS 3)"
@@ -89,7 +89,7 @@ def main():
     else:
         Presets =(
         "\n\n---Presets---"
-        "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4)"
+        "\n[1]PWR (Gravelines NGS,Ringhals-2-3-4,Kori 1-2-3-4, Akkuyu Nuclear)"
         "\n[2]BWR (Fukushima, Ringhals-1)"
         "\n[3]PHWR (Bruce NGS, Olkiluoto NGS 1-2)"
         "\n[4]EPR (Olkiluoto NGS 3)"
