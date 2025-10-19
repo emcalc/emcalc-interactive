@@ -5,8 +5,7 @@ black
 # ----
 
 # local package install: run "pip install -e ."
-libemcalc @ git+https://
-grams-to-kg @ git+https://github.com/eymndev/Grams-to-KG.git
+libemcalc @ git+https://github.com/emcalc/libemcalc
 
 # other requirements:
 # nothing
