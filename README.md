@@ -1,4 +1,4 @@
-# ⚛️ emcalc interactive — Einstein’s E=mc² Energy Calculator
+# ⚛️ emcalc — Einstein’s E=mc² Energy Calculator
 
 > **Instantly calculate mass-energy equivalence with style, presets, and full open-source freedom.**
 
@@ -10,7 +10,7 @@
 
 ## ✨ What is emcalc?
 
-**emcalc interactive** is a lightweight, open-source tool designed to calculate energy from mass using Einstein's famous formula:  
+**emcalc** is a lightweight, open-source tool designed to calculate energy from mass using Einstein's famous formula:  
 \[
 E = mc^2
 \]
@@ -18,7 +18,7 @@ E = mc^2
 But it doesn’t stop there:
 
 - 🎛️ **Presets** for common nuclear power plants
-- 📟 **CLI** and **Interactive** version is **same app**
+- 📟 **Minimal**, **Ultra**, and **interactive** modes included  
 - 🧠 **Educational**: Great for students, teachers, and science lovers  
 - 🛠️ **Open Source** and licensed under **GNU GPLv3**
 
@@ -26,6 +26,7 @@ But it doesn’t stop there:
 
 ## 📦 Features
 
+- 🚀 Multi-mode support: interactive, CLI, and minimal  
 - 💡 Helpful tooltips and preset values  
 - 🧪 Ideal for physics learning, projects, or curiosity  
 - 🐧 Cross-platform (Tested on macOS, Linux, Windows)  
@@ -48,7 +49,7 @@ python3 emcalc.py
 
 Option 2: Compiled file (macOS/Linux/Windows)
 
-go the [Installition Link](https://github.com/emcalc/emcalc.github.io/releases/latest)
+go the [Installition Link](https://github.com/emcalc/emcalc-interactive/releases/latest)
 
 download and unzip file
 
