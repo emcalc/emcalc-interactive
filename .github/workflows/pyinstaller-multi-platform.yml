@@ -35,7 +35,6 @@ jobs:
       - name: Build with PyInstaller
         run: |
           pyinstaller --clean --noconfirm --onefile -n emcalc emcalc.py
-          pyinstaller --clean --noconfirm --onefile -n CLI_emcalc CLI_emcalc.py
           
       - name: Upload artifact
         uses: actions/upload-artifact@v4
