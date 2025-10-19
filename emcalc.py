@@ -1,8 +1,6 @@
 from libemcalc import *
 import math
 
-WORLD_POWER_W = 2.0e13  # ~20 TW, küresel ortalama güç varsayımı
-
 langs = (
     "\n\n---Languages---"
     "\n[tr]Türkçe"
@@ -22,19 +20,12 @@ def _calculations(mass_gram, long_term_efficiency, one_usage_efficiency, j_to_el
     one_usage_time_seconds = calculate_led_on_time_seconds(one_usage_electric_energy, watt)
     one_usage_time_hours = one_usage_time_seconds / 3600
 
-    # Additional calculations for Kardashev scale
-    p_added_year = one_usage_electric_energy / (365 * 24 * 3600)  # power added averaged over a year
-    K_world = math.log10(WORLD_POWER_W) / 10
-    K_new = math.log10(WORLD_POWER_W + p_added_year) / 10
-    deltaK = K_new - K_world
-
     return (long_term_efficiency, long_term_practical_energy,
             one_usage_efficiency, one_usage_practical_energy,
             theoretical_energy, watt, device_name,
-            one_usage_time_seconds, one_usage_time_hours,
-            p_added_year, K_world, K_new, deltaK)
+            one_usage_time_seconds, one_usage_time_hours)
 
-def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_efficiency, one_usage_practical_energy, theoretical_energy, watt, device_name, one_usage_time_seconds, one_usage_time_hours, p_added_year, K_world, K_new, deltaK):
+def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_efficiency, one_usage_practical_energy, theoretical_energy, watt, device_name, one_usage_time_seconds, one_usage_time_hours):
     
     if lang == "tr":
         print("\n--- SONUÇLAR ---")
@@ -47,12 +38,6 @@ def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_e
         print(f"(Bu yaklaşık olarak {one_usage_time_hours:.0f} saat.)")
         print(f"(Bu yaklaşık olarak {one_usage_time_hours/24:.2f} gün.)")
         print(f"(Bu yaklaşık olarak {one_usage_time_hours/24/365:.2f} yıl.)")
-        print(f"(Bu yaklaşık olarak {one_usage_time_hours/24/365/100:.4f} asır.)")
-        print(f"(Bu yaklaşık olarak {one_usage_time_hours/24/365/1000:.2f} bin yıl.)")
-        print("=" * 20 + " KARDASHEV " + "=" * 20)
-        print(f"Dünya (varsayım): P≈{WORLD_POWER_W:.2e} W → K≈{K_world:.6f}")
-        print(f"Senin katkın (1 yıla yayılmış): +{p_added_year:.2e} W")
-        print(f"Yeni K ≈ {K_new:.6f}  |  ΔK ≈ {deltaK:.2e}")
     else:
         print("\n--- RESULTS ---")
         print(f"Long term practical energy (at {long_term_efficiency*100:.2f}% efficiency): {long_term_practical_energy:.0f} Joules")
@@ -64,12 +49,6 @@ def _results(lang, long_term_efficiency, long_term_practical_energy, one_usage_e
         print(f"(This is approximately {one_usage_time_hours:.0f} hours.)")
         print(f"(This is approximately {one_usage_time_hours/24:.2f} days.)")
         print(f"(This is approximately {one_usage_time_hours/24/365:.2f} years.)")
-        print(f"(This is approximately {one_usage_time_hours/24/365/100:.4f} centuries.)")
-        print(f"(This is approximately {one_usage_time_hours/24/365/1000:.2f} millennia.)")
-        print("=" * 20 + " KARDASHEV " + "=" * 20)
-        print(f"World (assumed): P≈{WORLD_POWER_W:.2e} W → K≈{K_world:.6f}")
-        print(f"Your contribution (spread over 1 year): +{p_added_year:.2e} W")
-        print(f"New K ≈ {K_new:.6f}  |  ΔK ≈ {deltaK:.2e}")
 # endregion
 
 def main():
